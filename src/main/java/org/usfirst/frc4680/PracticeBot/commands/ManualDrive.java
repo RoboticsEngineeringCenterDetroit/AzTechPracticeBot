@@ -45,8 +45,8 @@ public class ManualDrive extends Command {
     // Called repeatedly when this Command is scheduled to run
     @Override
     protected void execute() {
-        double turn = Robot.oi.joystick1.getRawAxis(2);
-        double fwd = Robot.oi.joystick1.getRawAxis(3);
+        double turn = Robot.oi.joystick1.getRawAxis(1);
+        double fwd = Robot.oi.joystick1.getRawAxis(4);
         Robot.driveTrain.drive(fwd, turn);
 
         if(Robot.oi.joystick1.getRawButton(1)) {
