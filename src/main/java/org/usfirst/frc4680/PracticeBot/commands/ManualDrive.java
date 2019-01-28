@@ -47,8 +47,8 @@ public class ManualDrive extends Command {
     @Override
     protected void execute() {
 
-        double fwd = Robot.oi.joystick1.getRawAxis(4);
-        double turn = Robot.oi.joystick1.getRawAxis(1);
+        double fwd = -Robot.oi.joystick1.getRawAxis(1);
+        double turn = Robot.oi.joystick1.getRawAxis(4);
 
         if(Robot.oi.joystick1.getRawButton(5)) {
             Robot.driveTrain.directionDrive(fwd, targetHeading);
